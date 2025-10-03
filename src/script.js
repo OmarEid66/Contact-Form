@@ -11,7 +11,7 @@ submitBtn.style.cursor = "not-allowed";
 form.addEventListener("input", checkFormValidity);
 
 form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent refresh
+  e.preventDefault(); // Prevent page refresh
 
   if (!form.checkValidity()) return; // Extra safety
 
@@ -23,7 +23,7 @@ form.addEventListener("submit", function (e) {
   form.reset();
   checkFormValidity(); // Re-disable button after reset
 
-  // Hide success after 4 seconds
+  // Hide success message after 4 seconds
   setTimeout(() => {
     successMessage.style.display = "none";
   }, 4000);
